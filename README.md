@@ -38,7 +38,7 @@ cargo run   //启动client
 add|1|10|true|test_a|curl_www.baidu.com|    //添加一个定时任务id=1，每10s运行一次 永久运行 任务名称test执行的命令是 curl www.baidu.com
 add|2|5|true|test_a|curl_www.baidu.com|   //添加一个定时任务id=2  每5s运行一次 永久运行 任务名称test1执行的命令是 curl www.baidu.com
 update|2|4|false|test_u|curl_www.baidu.com|  //更新任务id=2 4s之后运行一次 任务名称 test_u 行的命令是 curl www.baidu.com
-delete|1|
+delete|1|                                    //删除任务id=1的任务
 ```
 #### 待优化问题
 * 加入 --help 帮助提示
