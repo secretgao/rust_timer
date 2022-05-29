@@ -12,7 +12,7 @@
 loop {
      sleep(1)  //休息一秒
      接收来自客户端对server端发的消息解析成命令,存入wokerinfo结构体中
-     每次循环都把wokerinfo.surplus_time的值进行减一操作,当减到0时会异步执行wokerinfo.command中的命令
+     每次循环都把wokerinfo.surplus_time的值进行减一操作,当减到0时会异步执行wokerinfo.command中的命令 同时在server/src 目录中生成记录任务执行日志log.txt
      执行完成之后再把wokerinfo.time的值重新赋值给wokerinfo.surplus_time,进入下次循环
      维护一个删除任务的vec 当有任务要删除的时候加入vec中,每次循环检测vec中有没有要删除的任务
      如果有进行删除操作
